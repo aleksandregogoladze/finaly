@@ -3,147 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Store</title>
+    <title>კონტაქტი</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            background-color: #f0f8ff;
         }
         .header {
-            background-color: #d1c4e9;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background-color: #add8e6;
+            padding: 10px;
+            position: relative;
+            height: 50px; /* ფიქსირებული სიმაღლე */
         }
         .header a {
             text-decoration: none;
-            color: #333;
+            color: #000;
+            font-size: 22px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
             font-weight: bold;
-            margin: 0 10px;
+            position: absolute; /* გადაადგილებისთვის */
+            top: 10px; /* გადატანა ზევით */
+            left: 10px; /* გადატანა მარცხნივ */
+            transition: background-color 0.3s, color 0.3s;
         }
         .header a:hover {
-            color: yellow;
-        }
-        .title {
-            text-align: center;
-            background-color: #d1c4e9;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .games {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-            flex: 1;
-        }
-        .game {
-            text-align: center;
-            background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            width: 20%;
-            padding: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .game img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        .game .price {
-            text-decoration: line-through;
-            color: red;
-        }
-        .game .discounted-price {
-            color: green;
-            font-weight: bold;
-        }
-        .footer {
-            background-color: #d1c4e9;
-            padding: 20px;
-            text-align: center;
-            color: #333;
-        }
-        .services-btn {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #d1c4e9;
-            color: #333;
-            font-weight: bold;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .services-btn:hover {
             background-color: yellow;
-            color: #333;
+            color: #000;
         }
-        .tbc-logo {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            height: 100px;
-            width: auto;
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            height: calc(100vh - 60px); /* header height adjustment */
+            text-align: center;
+            position: relative;
+        }
+        .contact-card {
+            background-color: #f8e7ff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            position: absolute; /* ფიქსირებული პოზიცია */
+            top: 30%; /* აწეული ზემოთ */
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .contact-card h1 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+        .contact-card p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        .contact-card p span {
+            font-weight: bold;
         }
     </style>
-    
 </head>
 <body>
     <div class="header">
-        <a href="./ჩვენს შესახებ/index.html" id="about-us">ჩვენს შესახებ</a>
-        <a href="./კონტაქტი/index.html" id="contact">კონტაქტი</a>
-        <a href="./სიახლეები/index.html" id="news">სიახლეები</a>
+        <a href="#">მთავარი გვერდი</a>
+        <a href="./../index.html" class="home-btn">მთავარი გვერდი</a>
     </div>
-    <div class="title">Game Zona</div>
-    <div class="games">
-        <div class="game">
-            <a href="./html/gta 5/index.html">
-                <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA V">
-                <h3>GTA V</h3>
-                <p class="price">$29.99</p>
-                <p class="discounted-price">$19.99</p>
-            </a>
+    <div class="content">
+        <div class="contact-card">
+            <h1>კონტაქტი</h1>
+            <p>თუ რამეში დაგჭირდათ დახმარება ან კითხვა გაქვთ მოგვმართეთ:</p>
+            <p><span>ნომერი:</span> 599990602</p>
+            <p><span>ელფოსტა:</span> aleksandre.gogoladzete04@geolab.edu.ge</p>
+            <p>ჩვენი ოპერატორები სულ მალე გამოგეხმაურებიან და დაგეხმარებიან ყველა კითხვაზე პასუხის გაცემაში.</p>
         </div>
-        <div class="game">
-            <a href="./html/index.html">
-                <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg" alt="Red Dead Redemption 2">
-                <h3>Red Dead Redemption 2</h3>
-                <p class="price">$59.99</p>
-                <p class="discounted-price">$39.99</p>
-            </a>
-        </div>
-        <div class="game">
-            <a href="./html/Far Cry 5/index.html">
-                <img src="html/Far_Cry_5_resized_284x351 (1).jpg" alt="Far Cry 5">
-                <h3>Far Cry 5</h3>
-                <p class="price">$49.99</p>
-                <p class="discounted-price">$29.99</p>
-            </a>
-        </div>
-        <div class="game">
-            <a href="./html/CS GO/index.html">
-                <img src="html/CSGOcover_resized.jpg" alt="CS GO">
-                <h3>CS GO</h3>
-                <p class="price">$14.99</p>
-                <p class="discounted-price">$9.99</p>
-            </a>
-        </div>
-    </div>
-    <a href="./სერვისები/indedx.html" class="services-btn">სერვისები</a>
-    <img src="https://iteq.ge/image/data/tbc-logo-1024x683.png" alt="TBC ბანკის ლოგო" class="tbc-logo">
-    <div class="footer">
-        <p>ელფოსტა: aleksandre.gogoladzete04@geolab.edu.ge</p>
-        <p>ტელეფონის ნომერი: 599990602</p>
     </div>
 </body>
 </html>
